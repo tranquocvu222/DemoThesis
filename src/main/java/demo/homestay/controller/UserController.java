@@ -53,7 +53,7 @@ public class UserController {
 	}
 	
 	@PutMapping("/user/{userId}")
-	@PreAuthorize("hasAnyAuthority('user')")
+	@PreAuthorize("hasAnyAuthority('user','admin')")
 	public ResponseEntity<?> updatePasword(@PathVariable("userId") int userId, @RequestBody String newPassword){
 		return userService.updatePassWord(userId, newPassword);
 	}

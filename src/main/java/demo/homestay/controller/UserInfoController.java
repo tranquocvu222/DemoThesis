@@ -27,13 +27,13 @@ public class UserInfoController {
 	}
 	
 	@PostMapping("/{userId}")
-	@PreAuthorize("hasAnythority('user', 'admin')")
+	@PreAuthorize("hasAnyAuthority('user','admin')")
 	public ResponseEntity<?> createUserInfo(@PathVariable("userId") int userId, @RequestBody UserInfo userInfo){
 		return userInfoService.save(userId, userInfo);
 	}
 	
 	@PutMapping("/{userId}") 
-	@PreAuthorize("hasAnythority('user', 'admin')")
+	@PreAuthorize("hasAnyAuthority('user','admin')")
 	public ResponseEntity<?> updateUserInfo(@PathVariable("userId") int userId, @RequestBody UserInfo userInfo){
 		return userInfoService.update(userId, userInfo);
 	}

@@ -17,7 +17,7 @@ import javax.persistence.Table;
 import demo.homestay.model.UserInfo;
 
 @Entity
-@Table(name="user")
+@Table(name="t_user")
 public class User implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
